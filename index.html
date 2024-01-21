@@ -34,8 +34,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">About me</a></li>
-
+							<li class="active" ><a href="#main">About me</a></li>
+							<li class="active"><a href="#main .posts">My Projects</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/minh-nguyen-48963a196/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
@@ -52,7 +52,7 @@
 									
 									<h2><a href="#">My name is Minh Nguyen</a></h2>
 
-									<p>I have a MS degree in A.I at Boston University and B.Sc degree in Computer Science and Mathematics at Gettysburg College. Aspiring software engineer, A.I engineer, adept in SDLC principles and mobile application development.</p>
+									<p>I'm a curiosity-driven software engineer with a passion for expanding my tech knowledge and developing high-quality software. I have a MS degree in A.I at Boston University and B.Sc degree in Computer Science and Mathematics at Gettysburg College. Aspiring software engineer, A.I engineer, adept in SDLC principles and mobile application development.</p>
 
 								</header>
 								<!-- <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a> -->
@@ -99,6 +99,7 @@
 
 					</div>
 
+					
 				<!-- Footer -->
 					<footer id="footer">
 						<section class="split contact">
@@ -142,5 +143,19 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function (e) {
+						e.preventDefault();
+			
+						const targetSelector = this.getAttribute('href');
+						const targetSection = document.querySelector(targetSelector);
+			
+						if (targetSection) {
+							targetSection.scrollIntoView({ behavior: 'smooth' });
+						}
+					});
+				});
+			</script>
 	</body>
 </html>
